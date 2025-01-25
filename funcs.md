@@ -116,13 +116,13 @@ print("accelerationX = ", accelX)
 We expose a method to send a variantlist packet, which in Lua, you call it with:
 
 ```lua
-bot:sendPacketVariantList(client, variantTable)
+bot:sendPacketVariantList(sendToProxy, variantTable)
 ```
 
-- `client`: Boolean. If `true`, interpret as client → server packet; if `false`, interpret as server → client.
+- `sendToProxy`: Boolean. If `true`, interpret as sendToProxy → server packet; if `false`, interpret as server → sendToProxy.
 - `variantTable`: A **Lua table** containing up to 7 elements. Each element can be:
   - A string
-  - A number (will be stored as a float in `variant_t`)
+  - A number (will be stored as a float in `variant`)
   - A boolean (internally stored as integer 0 or 1)
 
 ### Usage
@@ -136,15 +136,8 @@ local varlist = {
 
 bot:sendPacketVariantList(true, varlist)
 ```
-This calls:
-```cpp
-variantlist_t varlist{ "OnTextOverlay", "`2Accepted`` Access." };
-handler->sendPacket(true, varlist);
-```
 
-This will produce a `variantlist_t` with up to 5 valid entries. If there are more than 7, the extras are ignored.
-
-> **Important**: The code that translates the Lua table → `variantlist_t` is fairly simple:
+> **Important**: The code that translates the Lua table → `variantlist` is fairly simple:
 > - Skips unknown types (tables, functions, etc.).
 > - Converts booleans to integer variant (0 or 1).
 > - Converts numbers to floats.
