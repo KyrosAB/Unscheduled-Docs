@@ -155,9 +155,6 @@ bot:sendPacketVariantList(true, varlist)
 - **`bot:place(itemID, x, y)`**  
   Places an item with `itemID` at `(x, y)`.
 
-- **`bot:RunLuaScript(script)`** and **`bot:StopLuaScript()`**  
-  Start/stop scripts on a particular bot. (Your code might differ slightly in how it’s triggered.)
-
 - **`getBot("SomeGrowID")`**  
   (Global function) Retrieves a `ServerHandler` userdatum for the given `growID`.
 
