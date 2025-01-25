@@ -20,10 +20,7 @@
 
 ## Introduction
 
-You have a `ServerHandler` class in C++ that manages a “bot” instance. We have exposed
-certain functions and members to Lua so you can control your instance
-
-This document describes:
+This document shows:
 
 1. **Setting and getting “options”** (booleans, integers, floats) in the bot.
 2. **Sending variantlists** with `sendPacketVariantList`.
