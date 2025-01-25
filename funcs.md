@@ -37,7 +37,7 @@ Where `name` is a string identifying the field to set/get.
 | Category          | Field Name                   | Type  | Description                                                                                         |
 |-------------------|------------------------------|-------|-----------------------------------------------------------------------------------------------------|
 | **Utils**         | `"showPing"`                 | bool  | If true, display ping somewhere in UI logs or the console.                                          |
-|                   | `"visualMod"`                | bool  | If true, enables some kind of “visual mod” mode.                                                    |
+|                   | `"visualMod"`                | bool  | If true, enables visual mod mode.                                                    |
 | **Mod Settings**  | `"leaveOnMod"`               | bool  | If true, bot leaves the world upon mod entry.                                                       |
 |                   | `"banAll"`                   | bool  | If true, bot automatically bans all players (use responsibly!).                                     |
 |                   | `"autoCollectBeforeLeave"`   | bool  | If true, bot tries to collect items before leaving the world.                                       |
