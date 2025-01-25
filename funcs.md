@@ -75,7 +75,7 @@ Where `name` is a string identifying the field to set/get.
 
 #### Setting an Option
 ```lua
--- Usage: bot:setOption("fieldName", value)
+-- Lua usage: bot:setOption("fieldName", value)
 
 bot:setOption("showPing", true)
 bot:setOption("visualMod", false)
